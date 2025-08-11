@@ -1,0 +1,11 @@
+Interface, InputPackets, OutputPackets, InputErrors, OutputErrors
+GigabitEthernet0/0, 123456, 789012, 12, 4
+GigabitEthernet0/1, 98765, 543210, 0, 0
+GigabitEthernet1/0, 876543, 234567, 9, 2
+GigabitEthernet1/1, 43210, 12345, 3, 0
+FastEthernet0/0, 234567, 876543, 0, 1
+FastEthernet0/1, 45678, 34567, 15, 8
+TenGigabitEthernet0/1, 112233, 221133, 7, 3
+Loopback0, 0, 0, 0, 0
+Vlan1, 12500, 13000, 1, 0
+Serial0/0/0, 65000, 62000, 23, 12
