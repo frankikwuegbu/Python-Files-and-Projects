@@ -1,6 +1,3 @@
-ip_address = input("enter ip address here: ")
-ip = ip_address.split(".")
-
 def validate_ip():
     count = 0
     octet_error = False
@@ -18,6 +15,23 @@ def validate_ip():
     if count != 4 and octet_error == False:
         print("[ERROR] invalid ip format. Four octets expected")
     elif count == 4 and octet_error == False:
-        print("valid ip")
+        address_class = ip_class(ip_address)
+        print(address_class)
+
+
+def ip_class(address):
+    if int(first_octet) <= 126:
+        return f"{address} is a class A ip address; {address}/8"
+    elif 127 < int(first_octet) <= 191:
+        return f"{address} is a class B ip address; {address}/16"
+    elif 191 < int(first_octet) <= 223:
+        return f"{address} is a class C ip address; {address}/24"
+    else:
+        return f"{address} falls in the reserved address range"
+
+
+ip_address = input("enter ip address here: ")
+ip = ip_address.split(".")
+first_octet = ip[0]
 
 validate_ip()
