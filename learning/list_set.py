@@ -11,6 +11,9 @@ for devices in devices_list:
 devices_list.append("router")
 print(devices_list)
 
+#add multiple elements
+devices_list.extend(["load balance", "multilayer switch"])
+
 #removes the firs occurence of an element from a list
 devices_list.remove("router")
 print(devices_list)
